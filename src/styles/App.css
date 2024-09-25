@@ -1,0 +1,14 @@
+#root {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.App {
+  margin: 0;
+  padding: 0;
+  display: block;
+  flex-direction: column;
+  width: 100dvw;
+  height: 100dvh;
+}

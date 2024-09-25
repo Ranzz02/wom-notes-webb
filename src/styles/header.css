@@ -1,0 +1,33 @@
+header {
+  height: 48px;
+  width: 100dvw;
+  display: flex;
+  background-color: #0c0825;
+}
+
+.header-content {
+  display: flex;
+  width: 100dvw;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-name {
+  padding-left: 12px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header-profile-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-right: 12px;
+  gap: 10px;
+}
+
+.header-profile-name {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,14 @@
+.notes.toolbar {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(8, 62, 78);
+}
+
+.notes.container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  gap: 20px;
+}
