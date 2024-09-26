@@ -7,8 +7,16 @@
 .App {
   margin: 0;
   padding: 0;
-  display: block;
+  display: flex;
   flex-direction: column;
   width: 100dvw;
   height: 100dvh;
+}
+
+.fill {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

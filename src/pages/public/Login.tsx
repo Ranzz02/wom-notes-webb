@@ -1,6 +1,8 @@
-import { UseAuth } from "@/components/contexts/AuthContext";
+import { UseAuth } from "@/contexts/AuthContext";
 import API from "@/utils/api";
 import { ChangeEvent, FormEvent, useState } from "react";
+import "@/styles/form.css";
+import { toast } from "react-toastify";
 
 export default function LoginPage() {
   const [input, setInput] = useState<{ username: string; password: string }>({
@@ -17,10 +19,14 @@ export default function LoginPage() {
         .then((response) => {
           console.log(response);
           login(response.data.user);
+          toast("Welcome back " + response.data.user.username, {
+            type: "success",
+            closeOnClick: true,
+          });
         })
         .finally();
     }
-    alert("Please provide a valid input");
+    toast("All fields not provided!", { type: "error", closeOnClick: true });
   };
 
   const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
@@ -32,10 +38,11 @@ export default function LoginPage() {
   };
 
   return (
-    <div>
-      <div>
+    <div className="fill">
+      <div className="form-container">
+        <h2>Welcome back login!</h2>
         <form onSubmit={handleSubmitEvent}>
-          <div>
+          <div className="form-row">
             <label>ID:</label>
             <input
               type="text"
@@ -48,7 +55,7 @@ export default function LoginPage() {
               onChange={handleInput}
             />
           </div>
-          <div>
+          <div className="form-row">
             <label>Password:</label>
             <input
               type="password"

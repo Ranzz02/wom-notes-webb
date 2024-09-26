@@ -7,8 +7,38 @@
 }
 
 .notes.container {
+  flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   overflow-y: scroll;
+  padding-top: 20px;
+  padding-bottom: 20px;
   gap: 20px;
+}
+
+.notes.create-container {
+  display: flex;
+  flex-flow: column;
+  background-color: blue;
+}
+
+.notes.create-container div {
+  width: 75%;
+  height: 48px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.notes.create-container div label {
+  flex: 0.2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notes.create-container div input {
+  flex: 0.8;
+  margin: 5px;
 }

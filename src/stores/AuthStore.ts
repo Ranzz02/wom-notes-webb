@@ -1,4 +1,4 @@
-import { User } from "@/components/contexts/AuthContext";
+import { User } from "@/contexts/AuthContext";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 

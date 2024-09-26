@@ -1,0 +1,23 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+}
+
+.form-row label {
+  flex: 0.4;
+}
+
+.form-row input {
+  flex: 0.6;
+}

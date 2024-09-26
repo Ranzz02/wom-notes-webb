@@ -1,6 +1,7 @@
 import API from "@/utils/api";
-import { Note } from "./pages/notes/Notes";
+import { Note } from "../pages/private/Notes";
 import "@/styles/note.css";
+import { toast } from "react-toastify";
 
 export interface NoteItemProps {
   item: Note;
@@ -15,8 +16,9 @@ function NoteItem(props: NoteItemProps) {
   const deleteNote = async () => {
     const result = await API.delete("/api/notes/" + id);
     if (result) {
-      removeNote(index);
+      return removeNote(index);
     }
+    toast("Failed to delete note", { type: "error", closeOnClick: true });
   };
 
   return (

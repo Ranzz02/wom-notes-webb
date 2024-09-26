@@ -1,0 +1,50 @@
+.profile-container {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.profile-update-container {
+  width: 260px;
+  display: flex;
+  flex-flow: column;
+}
+
+.profile-update-row {
+  height: 50px;
+  display: flex;
+}
+
+.profile-update-row label {
+  flex: 0.3;
+  display: flex;
+  align-items: center;
+}
+
+.profile-update-row input {
+  flex: 0.7;
+}
+
+.profile-password-container {
+  width: 260px;
+  display: flex;
+  flex-flow: column;
+}
+
+.profile-password-row {
+  height: 50px;
+  display: flex;
+}
+
+.profile-password-row label {
+  flex: 0.3;
+  display: flex;
+  align-items: center;
+}
+
+.profile-password-row input {
+  flex: 0.7;
+}

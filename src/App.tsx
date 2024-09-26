@@ -6,12 +6,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./styles/App.css";
-import DefaultLayout from "./components/layouts/DefaultLayout";
-import RegisterPage from "./components/pages/auth/Register";
-import LoginPage from "./components/pages/auth/Login";
+import DefaultLayout from "./layouts/DefaultLayout";
+import RegisterPage from "./pages/public/Register";
+import LoginPage from "./pages/public/Login";
 import PrivateRoute from "./components/PrivateRoute";
-import NotesPage, { LoadData } from "./components/pages/notes/Notes";
-import NotesLayout from "./components/layouts/NotesLayout";
+import NotesPage, { LoadData } from "./pages/private/Notes";
+import NotesLayout from "./layouts/NotesLayout";
+import ProfilePage from "./pages/private/Profile";
 
 function App() {
   const router = createBrowserRouter(
@@ -28,6 +29,7 @@ function App() {
               errorElement={<Navigate to={"/signin"} />}
             />
           </Route>
+          <Route path="/profile" element={<ProfilePage />} />
         </Route>
       </Route>
     )

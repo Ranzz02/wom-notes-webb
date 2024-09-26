@@ -1,5 +1,5 @@
 .note.container {
-  display: inline;
+  display: block;
   flex-direction: column;
   background-color: rgb(6, 1, 34);
   border-radius: 12px;
